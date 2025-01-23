@@ -1,1 +1,26 @@
-<p>home works!</p>
+<button
+  [routerLink]="['/instructions']"
+  class="fixed top-4 right-4 text-purple-950 hover:text-white bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-30 duration-200"
+  aria-label="Como jogar?"
+  title="Como jogar?"
+>
+  Como jogar?
+</button>
+
+<main>
+  <section id="title-container" class="flex flex-col gap-4 w-full max-w-screen-sm">
+    <h1 class="text-4xl font-bold text-white">Adedonha Game</h1>
+    <p class="text-white font-semibold">
+      Conhecido nacionalmente como Adedonha, esse jogo é uma versão totalmente
+      nova! Com muito mais interação, diversão e tecnologia.
+    </p>
+    <button
+      [routerLink]="['/categories']"
+      class="text-purple-950 hover:text-white bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-40 duration-200"
+      aria-label="Vamos lá!"
+      title="Vamos lá!"
+    >
+      Vamos lá!
+    </button>
+  </section>
+</main>
