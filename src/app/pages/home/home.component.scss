@@ -6,14 +6,3 @@
   width: 100vw;
   height: 100vh;
 }
-
-@media (max-width: 768px) {
-  #container {
-    width: 90%;
-    text-align: center;
-    margin: auto;
-  }
-  button {
-    width: auto;
-  }
-}
