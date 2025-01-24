@@ -1,1 +1,46 @@
-<p>categories works!</p>
+<button
+  [routerLink]="['/']"
+  class="fixed top-4 left-4 text-purple-950 hover:text-white bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-20 duration-200"
+  aria-label="Voltar"
+  title="Voltar"
+>
+  Voltar
+</button>
+
+<main class="w-screen flex flex-col items-center p-6">
+  <section
+    id="title-container"
+    class="flex flex-col gap-4 w-full max-w-screen-sm text-center"
+  >
+    <h1 class="text-4xl font-bold text-white">Categorias</h1>
+    <p class="text-white font-semibold">
+      Selecione um dos temas abaixo para você jogar:
+    </p>
+  </section>
+
+  <section
+    id="categories-container"
+    class="flex flex-wrap justify-center items-center gap-4 my-6"
+  >
+    @for (item of categories; track $index) {
+    <div
+      (click)="categorySelected = item"
+      [ngClass]="categorySelected === item ? 'bg-yellow-700 text-white' : ''"
+      class="max-w-sm rounded overflow-hidden shadow-lg bg-white"
+    >
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">{{ item }}</div>
+      </div>
+    </div>
+    }
+  </section>
+
+  <button
+    [routerLink]="['/game/' + categorySelected]"
+    class="text-purple-950 hover:text-white bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-40 duration-200"
+    aria-label="Vamos lá!"
+    title="Vamos lá!"
+  >
+    Vamos lá!
+  </button>
+</main>
